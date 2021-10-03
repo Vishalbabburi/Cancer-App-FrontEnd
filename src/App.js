@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { useContext, useEffect } from 'react';
+import './App.css';
+import AppContext from './components/AppContext';
+import Navbar from './components/navbar/navbar';
+import Landing from './components/landing/landing'
+import clogo from './iisc.png'
+import footer from './footer.png'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
+import MainForm from './components/submissionform/MainForm/MainForm';
+import Output from './components/output/Output';
 function App() {
+  const {loginstatus,showOutput}=useContext(AppContext);
+  useEffect(()=>{
+    console.log(showOutput);
+  },[showOutput]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+    <div>
+      <header>
+      <Navbar></Navbar>
       </header>
+      <div>
+        {/* <Switch>
+        <Route path="/Landing">
+                {loginstatus ?<h1>Welcome</h1> : <Landing/>}
+              </Route> 
+        </Switch> */}
+        {loginstatus? showOutput?<Output/>:<MainForm/>:<Landing/>}
+      </div>
+      <div className="logodiv">
+      <img  className="logostyle" src={footer} alt="logo" />
+      </div>
+    
     </div>
+    </Router>
   );
 }
 

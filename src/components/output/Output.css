@@ -1,0 +1,26 @@
+.contentDiv{
+    margin-top: 250px;
+    width: 1000px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 200px;
+    
+}
+.dropdown{
+    padding: 7px;
+    width: 300px;
+}
+.formControl{
+    margin-left: 50px;
+    
+}
+.buttonDiv{
+    text-align: center;
+}
+.fileName{
+    margin-top: 10px;
+}
+.crossIcon{
+    margin-left:20px;
+}
