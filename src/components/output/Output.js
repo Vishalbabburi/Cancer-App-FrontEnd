@@ -2,6 +2,7 @@ import { useState, useEffect,useRef } from "react";
 import {ImCross} from 'react-icons/im'
 import { IconContext } from 'react-icons';
 import './Output.css'
+import outputLogo from './cell.jpeg'
 
 const Output =(props)=>{
     const [testResponse,setResponse]=useState(new FormData());
@@ -11,15 +12,18 @@ const Output =(props)=>{
         mytestResponse.append("count",50)
         console.log("use effect of Output"+testResponse.get("count"))
         setResponse(mytestResponse);
-    },[testResponse] )
+    },[] )
 
     return (
+        <div>
         <div className="contentDiv shadow-lg p-3 mb-5 bg-white rounded">
-            <h2>Test results</h2>
+        <h2 className="heading">Test results</h2>
             <div>
                 <p><b>Group{" "+testResponse.get("group")+" "}</b> scenario</p>
-                <p>{testResponse.get("count")+" "} is the cell count</p>
+                <p> <b> Total cell count{": "+testResponse.get("count")}</b></p>
+                <img className="imgStyle" src={outputLogo}/>
             </div>
+        </div>
         </div>
             
             

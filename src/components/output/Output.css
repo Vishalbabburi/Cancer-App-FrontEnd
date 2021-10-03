@@ -7,20 +7,11 @@
     padding-top: 200px;
     
 }
-.dropdown{
-    padding: 7px;
-    width: 300px;
+.heading{
+    margin-left: 20px;
+    color:green
 }
-.formControl{
-    margin-left: 50px;
+.imgStyle{
+    width:150px;
     
-}
-.buttonDiv{
-    text-align: center;
-}
-.fileName{
-    margin-top: 10px;
-}
-.crossIcon{
-    margin-left:20px;
 }
