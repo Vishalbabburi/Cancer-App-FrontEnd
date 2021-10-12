@@ -19,7 +19,7 @@ export const AppProvider = ({ children }) => {
     axios.post("http://localhost:5000/final", data).then(
       (response) => {
         setTestResponse(response.data);
-        console.log("response data: ", response.data[group]);
+        console.log("response data: ", response.data);
       },
       (error) => {
         console.log(error);
