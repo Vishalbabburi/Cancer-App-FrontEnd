@@ -34,7 +34,7 @@ const MainForm =(props)=>{
     const uploadHandler =(event)=>{
         event.preventDefault();
         const formData = new FormData();
-        formData.append("testphoto", file);
+        formData.append("testphoto", file[0]);
         formData.append("organ",selectedOrgan);
         console.log(file)
         console.log(file[0].name)
