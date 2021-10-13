@@ -1,6 +1,7 @@
 import { useState, useEffect,useRef,useContext} from "react";
 import AppContext from '../AppContext'
 import './Output.css'
+import { Dimmer, Loader } from "semantic-ui-react";
 //import outputLogo from './cell.jpeg'
 
 const Output =(props)=>{
@@ -14,6 +15,8 @@ const Output =(props)=>{
        // setResponse(mytestResponse);
     },[] )
 
+    //loading impl
+   
     return (
         <div>
         <div className="contentDiv shadow-lg p-3 mb-5 bg-white rounded">

@@ -5,7 +5,7 @@ import AppContext from "../../AppContext";
 import './MainForm.css'
 
 const MainForm =(props)=>{
-    const [organs,setOrgans]=useState(["Brain","Heart","Liver","Kidney"]);
+    const [organs,setOrgans]=useState(["Reactive Meso","Ptc","Pleural Fluid Nhl","Ascitic Fluid Adeno", "Ascitic Fluid Peritoneal","Ascitic Fluid Adeno"]);
     const { testResponse, testAsync } = useContext(AppContext);
     const [selectedOrgan,setSelectedOrgan]=useState("");
     const [file, setFile] = useState(null);
@@ -58,7 +58,7 @@ const MainForm =(props)=>{
             <form>
 
             <select className="dropdown"  onChange={organChangeHandler}>
-                <option selected disabled defaultValue="" className="dropdown-item">Select organ</option>
+                <option selected disabled defaultValue="" className="dropdown-item">Select lesion</option>
                 {organs.map((organ)=>{
                     return(
                         <option value={organ}>{organ} </option>
@@ -66,7 +66,7 @@ const MainForm =(props)=>{
                 })}
             </select>
 
-            <label htmlFor="file-upload" className="formControl">Choose File: &nbsp;</label>
+            <label htmlFor="file-upload" className="formControl">Choose Image: &nbsp;</label>
             <input id="file-upload" disabled ref={fileRef} type="file" accept=".jpeg" onChange={onFileChange} />
 
             {file && typeof file[0] !== 'undefined'? 

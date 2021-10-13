@@ -3,14 +3,18 @@ import logo2 from '../../dese_1.png'
 
 const Navbar=(props)=> {
     const logoStyle={
-        width:"50px"
+      marginLeft:"10px",
+        width:"60px"
     }
     const logo2Style={
-      width:"100px"
+      width:"100px",
+      marginRight:"10px"
   }
     const contentStyle={
         textAlign:"center",
         color:"white",
+        fontWeight : "bolder",
+        fontSize: "40px",
         marginLeft:"auto",
         marginRight:"auto"
     }
