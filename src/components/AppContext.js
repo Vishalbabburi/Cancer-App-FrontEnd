@@ -16,10 +16,14 @@ export const AppProvider = ({ children }) => {
   const testAsync = (data) => {
     setShowOutput(true);
     console.log(data.get("organ"));
-    axios.post("http://localhost:5000/final", data).then(
+    axios.post("http://localhost:5000/final", data,{
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    }).then(
       (response) => {
-        setTestResponse(response);
-        console.log("response data: ", response.group);
+        setTestResponse(response.data);
+        console.log("response data: ", response.data);
       },
       (error) => {
         console.log(error);
