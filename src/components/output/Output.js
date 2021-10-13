@@ -10,7 +10,7 @@ const Output =(props)=>{
         // var mytestResponse=new FormData();
         // mytestResponse.append("group",1)
         // mytestResponse.append("count",50)
-        console.log("use effect of Output"+testResponse.get("count"))
+       // console.log("use effect of Output"+testResponse.get("count"))
        // setResponse(mytestResponse);
     },[] )
 
