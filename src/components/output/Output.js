@@ -16,8 +16,16 @@ const Output =(props)=>{
     },[] )
 
     //loading impl
-   
+    if (Object.keys(testResponse).length===0) 
     return (
+       <div className="Loader">
+          <Dimmer active inverted size="massive">
+             <Loader inverted>Loading</Loader>
+          </Dimmer>
+       </div>
+     );
+
+     return (
         <div>
         <div className="contentDiv shadow-lg p-3 mb-5 bg-white rounded">
         <h2 className="heading">Test results</h2>
