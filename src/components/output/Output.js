@@ -10,7 +10,7 @@ const Output =(props)=>{
         // var mytestResponse=new FormData();
         // mytestResponse.append("group",1)
         // mytestResponse.append("count",50)
-       // console.log("use effect of Output"+testResponse.get("count"))
+        //console.log("use effect of Output"+testResponse.get("count"))
        // setResponse(mytestResponse);
     },[] )
 
@@ -21,7 +21,7 @@ const Output =(props)=>{
             <div>
                 <p><b>Group{" "+testResponse.group+" "}</b> scenario</p>
                 <p> <b> Total cell count{": "+testResponse.count}</b></p>
-                <img className="imgStyle" src={atob(testResponse.out_img)} alt="cancer_cell"/>
+                <img className="imgStyle" src={Buffer.from(testResponse.out_img+'', 'base64')} alt="cancer_cell"/>
             </div>
         </div>
         </div>

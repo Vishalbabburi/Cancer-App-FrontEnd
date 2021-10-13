@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react"
 import AppContext from "../AppContext"
-import logo from '../../iisc.png'
+import logo from '../../bees_1.png'
 
 const Landing=(props)=> {
    const [password,setPassword]= useState("");
@@ -18,7 +18,7 @@ const Landing=(props)=> {
         textAlign:"center",
     }
     const logoStyle={
-        width:"400px",
+        width:"300px",
         marginBottom:"20px",
     }
     return (

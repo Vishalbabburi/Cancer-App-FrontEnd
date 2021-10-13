@@ -12,6 +12,7 @@ export const AppProvider = ({ children }) => {
     if(data==="1234") setLoginStatus(true);
     
   };
+//,{headers: {'Content-Type': 'multipart/form-data'}}
 
   const testAsync = (data) => {
     setShowOutput(true);

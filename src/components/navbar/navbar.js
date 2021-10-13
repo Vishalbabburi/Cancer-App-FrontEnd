@@ -1,9 +1,14 @@
 import logo from '../../iisc.png'
+import logo2 from '../../dese_1.png'
 
 const Navbar=(props)=> {
     const logoStyle={
-        width:"50px"
+        width:"50px",
+        float:left
     }
+    const logo2Style={
+      width:"100px"
+  }
     const contentStyle={
         textAlign:"center",
         color:"white",
@@ -18,9 +23,12 @@ const Navbar=(props)=> {
         </a>
         <span style={contentStyle}>
             <div >
-            <h2 className="nav-link " style={contentStyle}>Indian Institute of Science</h2>
+            <h2 className="nav-link " style={contentStyle}>FNAC CELL GROUPING</h2>
             </div>
         </span>
+        <a className="" href="#">
+        <img style={logo2Style} src={logo2} alt="logo" />
+        </a>
         
         
 </nav>
