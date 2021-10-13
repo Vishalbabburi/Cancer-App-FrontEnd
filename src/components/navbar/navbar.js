@@ -3,8 +3,7 @@ import logo2 from '../../dese_1.png'
 
 const Navbar=(props)=> {
     const logoStyle={
-        width:"50px",
-        float:left
+        width:"50px"
     }
     const logo2Style={
       width:"100px"
