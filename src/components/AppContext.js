@@ -15,7 +15,7 @@ export const AppProvider = ({ children }) => {
 
   const testAsync = (data) => {
     setShowOutput(true);
-    console.log(data.get("organ"));
+    console.log(data.get("testphoto"));
     axios.post("http://localhost:5000/final", data,{
       headers: {
         'Content-Type': 'multipart/form-data'
@@ -37,6 +37,7 @@ export const AppProvider = ({ children }) => {
       value={{
         loginstatus,
         showOutput,
+        testResponse,
         loginAsync,
         testAsync
       }}
