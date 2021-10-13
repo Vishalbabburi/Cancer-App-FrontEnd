@@ -18,7 +18,7 @@ const Navbar=(props)=> {
         </a>
         <span style={contentStyle}>
             <div >
-            <h2 className="nav-link " style={contentStyle}>Indian Institute of Science</h2>
+            <h2 className="nav-link " style={contentStyle}>FNAC CELL GROUPING</h2>
             </div>
         </span>
         
