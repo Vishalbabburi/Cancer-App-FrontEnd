@@ -15,11 +15,11 @@ export const AppProvider = ({ children }) => {
 
   const testAsync = (data) => {
     setShowOutput(true);
-    console.log(data.get("organ"));
+    console.log(data.get('organ'));
     axios.post("http://localhost:5000/final", data).then(
       (response) => {
         setTestResponse(response);
-        console.log("response data: ", response.group);
+        console.log("response data: ", response.data.group);
       },
       (error) => {
         console.log(error);
