@@ -40,9 +40,13 @@ export const AppProvider = ({ children }) => {
   //   })
   //   .then(response => response.blob())
   // }
-  return axios.post('http://localhost:5000/download',data)
-              .then(response=>{console.log(response.data)})
+  // return axios.post('http://localhost:5000/download',data)
+  //             .then(response=>{console.log(response.data)})
+  // }
+  return axios.get('http://localhost:5000/download')
+             .then(response=>{console.log(response.data)})
   }
+
 
   const setShowOutputHandler = (shouldDisplay) => {
     console.log("should show output "+shouldDisplay);
