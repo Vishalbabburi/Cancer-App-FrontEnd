@@ -27,7 +27,7 @@ const Landing=(props)=> {
         <div className="container-sm p-6 my-3 ">
         <label htmlFor="userPassword" className="form-label mb-2">Enter Password:&nbsp;&nbsp;</label>
         <input id="userPassword" className="" type="password" onChange={onChangeHandler} defaultValue={password}></input><br/>
-        <button className="btn btn-primary" type="submit" onClick={loginhandler}>login</button>
+        <button className="btn btn-primary" type="submit" onClick={loginhandler}>Login</button>
       </div>
     </div>
       

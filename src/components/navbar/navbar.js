@@ -26,7 +26,7 @@ const Navbar=(props)=> {
         </a>
         <span style={contentStyle}>
             <div >
-            <h2 className="nav-link " style={contentStyle}>FNAC CELL GROUPING</h2>
+            <h2 className="nav-link " style={contentStyle}>FNAC CELL GRADING</h2>
             </div>
         </span>
         <a className="" href="#">

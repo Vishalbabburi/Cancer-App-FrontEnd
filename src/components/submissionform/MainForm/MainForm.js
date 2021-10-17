@@ -5,7 +5,7 @@ import AppContext from "../../AppContext";
 import './MainForm.css'
 
 const MainForm =(props)=>{
-    const [organs,setOrgans]=useState(["Reactive Meso","Ptc","Pleural Fluid Nhl","Ascitic Fluid Adeno", "Ascitic Fluid Peritoneal","Ascitic Fluid Adeno"]);
+    const [organs,setOrgans]=useState(["Reactive Meso","Ptc","Pleural Fluid Nhl","Ascitic Fluid Adeno", "Ascitic Fluid Peritoneal","CA Breast"]);
     const { testResponse, testAsync } = useContext(AppContext);
     const [selectedOrgan,setSelectedOrgan]=useState("");
     const [file, setFile] = useState(null);
@@ -35,6 +35,7 @@ const MainForm =(props)=>{
         event.preventDefault();
         const formData = new FormData();
         formData.append("testphoto", file[0]);
+        formData.append("f_name", file[0].name);
         formData.append("organ",selectedOrgan);
         console.log(file)
         console.log(file[0].name)
@@ -54,7 +55,8 @@ const MainForm =(props)=>{
         console.log(file);
     } 
     return (
-        <div className="contentDiv shadow-lg p-3 mb-5 bg-white rounded">
+        <div>
+        <div className="contentPiv shadow-lg p-3 mb-5 bg-white rounded">
             <form>
 
             <select className="dropdown"  onChange={organChangeHandler}>
@@ -87,6 +89,12 @@ const MainForm =(props)=>{
             <button id="submit-button" ref={buttonRef} className="btn btn-primary" onClick={uploadHandler}>Start Test</button>
             </div>
             </form>
+        </div>
+
+        <div className="content_d p-0 mb-0 bg-white rounded">
+        <p style= {{color:"red"}} > <b> Note: Please select PAP stained image at 40X Magnification </b></p>
+
+        </div>
         </div>
             
             
