@@ -32,6 +32,12 @@ export const AppProvider = ({ children }) => {
     );
   };
 
+  const downloadfileAsync = async () => {
+    return axios.get('http://localhost:5000/download', {
+        responseType: 'blob',
+    })
+    .then(response => response.blob())
+  }
 
   return (
     <AppContext.Provider
@@ -40,7 +46,8 @@ export const AppProvider = ({ children }) => {
         showOutput,
         testResponse,
         loginAsync,
-        testAsync
+        testAsync,
+        downloadfileAsync
       }}
     >
       {children}

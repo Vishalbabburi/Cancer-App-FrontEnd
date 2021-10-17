@@ -3,6 +3,7 @@ import AppContext from '../AppContext'
 import './Output.css'
 import { Dimmer, Loader, Segment} from "semantic-ui-react"
 import Spinner from 'react-bootstrap/Spinner' ;
+import { saveAs } from 'file-saver'
 import { Link } from 'react-router-dom';
 //import outputLogo from './cell.jpeg'
 //<img className="imgStyle" src={Buffer.from(testResponse.out_img, 'base64')} alt="cancer_cell"/>
@@ -10,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Output =(props)=>{
    // const [testResponse,setResponse]=useState(new FormData());
-    const { testResponse} = useContext(AppContext);
+    const { testResponse, downloadfileAsync} = useContext(AppContext);
     useEffect(()=>{
         // var mytestResponse=new FormData();
         // mytestResponse.append("group",1)
@@ -19,7 +20,10 @@ const Output =(props)=>{
        // setResponse(mytestResponse);
     },[] )
 
-
+    const downloadFile = () => {
+        downloadfileAsync()
+          .then(blob => saveAs(blob, 'file.csv'))
+      }
 
     
 
@@ -59,7 +63,8 @@ const Output =(props)=>{
                 <p>Interpretation: <b>{" "+testResponse.suggest+" "}</b></p>
                 <p> Total Cell Count <b> {": " +testResponse.count}  </b></p>
                 <br/>
-                <button onClick={() => window.location.reload(false)} class="btn btn-primary" position = "absolute">  Log Out  </button> 
+                <button type='button'className="btn btn-success" onClick={downloadFile}>Download</button>
+                <button onClick={() => window.location.reload(false)} className="btn btn-danger" position = "absolute">  Log Out  </button> 
 
             </div>
         </div>
