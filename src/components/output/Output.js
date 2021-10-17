@@ -22,8 +22,8 @@ const Output =(props)=>{
     },[] )
 
     const downloadFile = (data) => {
-        downloadfileAsync(data)
-          .then(blob => saveAs(blob, 'file.csv'))
+        downloadfileAsync(data);
+        //   .then(blob => saveAs(blob, 'file.csv'))
       }
       const testAgainHandler = () => {
             setShowOutput(false);
