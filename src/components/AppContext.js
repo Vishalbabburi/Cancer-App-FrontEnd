@@ -46,7 +46,7 @@ export const AppProvider = ({ children }) => {
 
   const setShowOutputHandler = (shouldDisplay) => {
     console.log("should show output "+shouldDisplay);
-  setShowOuput(shouldDisplay);
+  setShowOutput(shouldDisplay);
   
 };
 
