@@ -33,6 +33,7 @@ export const AppProvider = ({ children }) => {
   };
 
   const downloadfileAsync = async (data) => {
+    console.log(data+" is being sent for /download")
     return axios.post('http://localhost:5000/download',data, {
         responseType: 'blob',
     })
