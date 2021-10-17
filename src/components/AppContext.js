@@ -41,7 +41,7 @@ export const AppProvider = ({ children }) => {
   //   .then(response => response.blob())
   // }
   return axios.post('http://localhost:5000/download',data)
-              .then(response=>{console.log(response+" recieved csv")})
+              .then(response=>{console.log(response.data)})
   }
 
   return (
