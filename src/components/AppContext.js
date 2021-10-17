@@ -44,6 +44,12 @@ export const AppProvider = ({ children }) => {
               .then(response=>{console.log(response+" recieved csv")})
   }
 
+  const setShowOutputHandler = (shouldDisplay) => {
+    console.log("should show output "+shouldDisplay);
+  setShowOuput(shouldDisplay);
+  
+};
+
   return (
     <AppContext.Provider
       value={{
@@ -52,7 +58,8 @@ export const AppProvider = ({ children }) => {
         testResponse,
         loginAsync,
         testAsync,
-        downloadfileAsync
+        downloadfileAsync,
+        setShowOutputHandler
       }}
     >
       {children}

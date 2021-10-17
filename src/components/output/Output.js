@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Output =(props)=>{
    // const [testResponse,setResponse]=useState(new FormData());
     //const [key ,setKey]=useState("");
-  const { testResponse, setShowOutput,downloadfileAsync} = useContext(AppContext);
+  const { testResponse, setShowOutputHandler,downloadfileAsync} = useContext(AppContext);
     useEffect(()=>{
         // var mytestResponse=new FormData();
         // mytestResponse.append("group",1)
@@ -26,7 +26,7 @@ const Output =(props)=>{
         //   .then(blob => saveAs(blob, 'file.csv'))
       }
       const testAgainHandler = () => {
-            setShowOutput(false);
+            setShowOutputHandler(false);
       }
 
     
