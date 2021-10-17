@@ -29,7 +29,7 @@ const Output =(props)=>{
             setShowOutputHandler(false);
       }
 
-    
+    //onClick={()=>downloadFile(testResponse.key)}
 
     //loading impl
     if (Object.keys(testResponse).length===0) 
@@ -67,7 +67,7 @@ const Output =(props)=>{
                 <p>Interpretation: <b>{" "+testResponse.suggest+" "}</b></p>
                 <p> Total Cell Count <b> {": " +testResponse.count}  </b></p>
                 <br/>
-                <button type='button'className="btn btn-success" onClick={()=>downloadFile(testResponse.key)}>Download</button>
+                <button type='button'className="btn btn-success" ><a href={"http://localhost:5000/download"}>Download</a></button>
                 <button onClick={() => window.location.reload(false)} className="btn btn-danger functionalButton" position = "absolute">  Log Out  </button>
                 <button onClick={testAgainHandler} className="btn btn-info functionalButton" position = "absolute">  Test Again  </button>  
 
