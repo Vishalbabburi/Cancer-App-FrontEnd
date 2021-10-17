@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Output =(props)=>{
    // const [testResponse,setResponse]=useState(new FormData());
-  
+    //const [key ,setKey]=useState("");
   const { testResponse, setShowOutput,downloadfileAsync} = useContext(AppContext);
     useEffect(()=>{
         // var mytestResponse=new FormData();
@@ -21,8 +21,8 @@ const Output =(props)=>{
        // setResponse(mytestResponse);
     },[] )
 
-    const downloadFile = () => {
-        downloadfileAsync()
+    const downloadFile = (data) => {
+        downloadfileAsync(data)
           .then(blob => saveAs(blob, 'file.csv'))
       }
       const testAgainHandler = () => {
@@ -67,7 +67,7 @@ const Output =(props)=>{
                 <p>Interpretation: <b>{" "+testResponse.suggest+" "}</b></p>
                 <p> Total Cell Count <b> {": " +testResponse.count}  </b></p>
                 <br/>
-                <button type='button'className="btn btn-success" onClick={(testResponse)=>downloadFile(testResponse.key)}>Download</button>
+                <button type='button'className="btn btn-success" onClick={()=>downloadFile(testResponse.key)}>Download</button>
                 <button onClick={() => window.location.reload(false)} className="btn btn-danger functionalButton" position = "absolute">  Log Out  </button>
                 <button onClick={testAgainHandler} className="btn btn-info functionalButton" position = "absolute">  Test Again  </button>  
 
