@@ -32,8 +32,8 @@ export const AppProvider = ({ children }) => {
     );
   };
 
-  const downloadfileAsync = async () => {
-    return axios.get('http://localhost:5000/download', {
+  const downloadfileAsync = async (data) => {
+    return axios.post('http://localhost:5000/download',data, {
         responseType: 'blob',
     })
     .then(response => response.blob())

@@ -87,3 +87,7 @@
     cursor: default !important;
     z-index: 8 !important;
   }
+
+  .functionalButton{
+      margin-left: 6px;
+  }
