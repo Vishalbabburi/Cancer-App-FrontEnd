@@ -67,7 +67,7 @@ const Output =(props)=>{
                 <p>Interpretation: <b>{" "+testResponse.suggest+" "}</b></p>
                 <p> Total Cell Count <b> {": " +testResponse.count}  </b></p>
                 <br/>
-                <button type='button'className="btn btn-success" ><a href={`http://localhost:5000/download?key=${testResponse.key}`}>download</a>Download</button>
+                <a href={`http://localhost:5000/download?key=${testResponse.key}`}><button type='button'className="btn btn-success" >Download</button></a>
                 <button onClick={() => window.location.reload(false)} className="btn btn-danger functionalButton" position = "absolute">  Log Out  </button>
                 <button onClick={testAgainHandler} className="btn btn-info functionalButton" position = "absolute">  Test Again  </button>  
 
