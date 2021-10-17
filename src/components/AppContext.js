@@ -42,6 +42,7 @@ export const AppProvider = ({ children }) => {
   // }
   return axios.post('http://localhost:5000/download',data)
               .then(response=>{console.log("recieved csv")})
+  }
 
   return (
     <AppContext.Provider
