@@ -60,6 +60,7 @@ export const AppProvider = ({ children }) => {
         loginstatus,
         showOutput,
         testResponse,
+        setTestResponse,
         loginAsync,
         testAsync,
         downloadfileAsync,
